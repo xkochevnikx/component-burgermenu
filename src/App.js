@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import BurgerMenu from "./Components/BurgerMenu/BurgerMenu";
-import BurgerImg from "./Components/img/burger_icon.svg";
+import { ReactComponent as BurgerImg } from "./Components/img/burger_icon.svg";
 
 function App() {
   const [active, setActive] = useState(false);
@@ -15,9 +15,8 @@ function App() {
       <div className="container">
         <nav>
           <div className="nav_box">
-            <img
-              src={BurgerImg}
-              alt="burger"
+            <BurgerImg
+              className="BurgerImg"
               onClick={() => setActive(!active)}
             />
           </div>

@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.BurgerImg {
+  fill: white;
+  stroke: black;
+}
+
 nav {
   position: fixed;
   z-index: 50;
