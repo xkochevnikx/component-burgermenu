@@ -2,9 +2,12 @@ import { useState } from "react";
 import "./App.css";
 import BurgerMenu from "./Components/BurgerMenu/BurgerMenu";
 import { ReactComponent as BurgerImg } from "./Components/img/burger_icon.svg";
+import ModalWindow from "./Components/ModalWindow/ModalWindow";
 
 function App() {
   const [active, setActive] = useState(false);
+  const [activeModal, setActiveModal] = useState(false);
+
   const items = [
     { value: "Главная", href: "/main" },
     { value: "О нас", href: "/info" },
@@ -19,6 +22,9 @@ function App() {
               className="BurgerImg"
               onClick={() => setActive(!active)}
             />
+            <button onClick={() => setActiveModal(!activeModal)}>
+              ModalWindow
+            </button>
           </div>
         </nav>
         <main>
@@ -69,6 +75,11 @@ function App() {
           active={active}
           setActive={setActive}
           header={"Бургер меню"}
+          items={items}
+        />
+        <ModalWindow
+          activeModal={activeModal}
+          setActiveModal={setActiveModal}
           items={items}
         />
       </div>

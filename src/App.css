@@ -23,6 +23,15 @@ nav {
   display: flex;
   align-items: center;
   margin-left: 20px;
+  column-gap: 20px;
+}
+
+.nav_box button {
+  color: black;
+  background-color: transparent;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 main {
