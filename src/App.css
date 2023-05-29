@@ -32,6 +32,8 @@ nav {
   padding: 5px;
   border-radius: 5px;
   cursor: pointer;
+  color: white;
+  font-weight: bold;
 }
 
 main {
